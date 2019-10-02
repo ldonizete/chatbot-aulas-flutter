@@ -1,14 +1,16 @@
 import 'package:chatbot/models/chat_message.dart';
+import 'package:clippy_flutter/clippy_flutter.dart';
 import 'package:flutter/material.dart';
 
 class ChatMessageListItem extends StatelessWidget {
-  final ChatMessage chatMessage;
+ // final ChatMessage chatMessage;
+  final Message chatMessageClippy;
 
-  ChatMessageListItem({this.chatMessage});
+  ChatMessageListItem({this.chatMessageClippy});
 
   @override
   Widget build(BuildContext context) {
-    return chatMessage.type == ChatMessageType.sent
+    return chatMessageClippy. == ChatMessageType.sent
         ? _showSentMessage()
         : _showReceivedMessage();
   }
